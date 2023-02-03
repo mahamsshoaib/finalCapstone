@@ -1,0 +1,678 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --basic-color:#FFF/*#E2D1F9*/;
+    --contrast-color:#8A307F;
+    --gradientcolor:-webkit-linear-gradient(rgb(119, 5, 100), rgb(255, 0, 93));
+    --shadow:0 0 10px rgba(116, 42, 100, 0.6);
+    --orange:orange;
+    --pink:rgb(222, 17, 51);
+}
+/*Main Grid*/
+.main-grid{
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-areas:"nav"
+    "banner"
+    "aboutus"
+    "recipes"
+    "reviews"
+    "team"
+    "menutable"
+    "footer" ;
+    color:var(--contrast-color);
+} 
+/*All Flex Items to be Centered*/
+.flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Navigation Bar*/
+nav{
+    grid-area:nav;
+    box-shadow:var(--shadow);
+    background:var(--gradientcolor);
+    padding:2%;
+    
+}
+/*Hiding Burger Menu*/
+nav label, #burger-menu
+{
+     display: none;
+}
+/*Navigation Bar Unordered List*/
+nav ul{
+    width:70%;
+    column-gap: 3%;
+}
+/*Navigation List*/
+nav li{
+    list-style: none;
+}
+/*Navigation list links (anchor)*/
+nav li a{
+    text-decoration: none;
+    font-weight:bold;
+    font-size:large;
+    color:var(--basic-color);
+}
+
+/*Banner container*/
+.banner{
+    grid-area: banner;
+    margin-top:2em; 
+     
+}
+/*Banner text*/
+.banner-text{
+    padding-left: 10%;
+    width:40%;
+    animation:ban-text 4s infinite;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+/*Banner Image*/
+.banner-img{
+    width:60%;
+}
+/*Banner Image*/
+.banner-img img{
+    width:100%;
+    padding-right:10%;
+}
+/*Banner Button*/
+.banner-text button{
+    margin-top:5%;
+    transition: all 0.5s ease-in-out;
+    font-size:medium;
+    width:50%;
+    font-weight:bold;
+    padding:5%;
+  }
+/*Banner Text Icon*/
+.banner-text span{
+    position: relative;
+}
+/*About Us container*/
+.about-us{
+    grid-area: aboutus;
+    margin-top:2em;
+    
+}
+/*About Us Image*/
+.about-image{
+    margin-left:2%;
+}
+/*About Us Image*/
+.about-us img{
+    width:80%;
+}
+/*About us Text*/
+.about-text{
+    margin-right:2em;
+}
+/*About Span Designing*/
+.about-text span{
+    /*background:var(--gradientcolor);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    color:var(--pink);
+    padding-right: 1%;
+   
+}
+/*About Text Heading*/
+.about-text h1{
+    text-transform:uppercase;
+}
+/*About Text anchor for see more*/
+.about-text p a{
+    /*text-decoration: none;
+    background: var(--gradientcolor);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    color: var(--pink);
+    text-decoration:none;
+}
+/*Recipes Container*/
+.recipes{
+    grid-area: recipes;
+    margin-top:2em;
+}
+/*Recipe Border*/
+.recipe-border{
+    box-shadow: var(--shadow);
+    margin:1.5%;
+    row-gap: 2%;
+    flex-basis:27%;
+    flex-direction: column;
+}
+/*Recipes Image Container*/
+.recipe-img{
+    width:100%;
+    flex-wrap:wrap;
+}
+/*Recipe Captions*/
+figcaption{
+    padding:1rem;
+    font-weight:bold;
+    font-style:italic;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*Recipe Image*/
+.recipe-img img{
+    padding:6%;
+    width:20em;
+    transition:filter .25s;
+    max-height:15em;
+}
+/*Overlay Image*/
+.overlay-image{
+    position: relative;
+}
+/*Overlay Image Text*/
+.overlay-text{
+    position: absolute;
+    top:43%;
+    left:45%;
+    transform: translate(-50%, -50%);
+    margin:4%;
+    color:var(--orange);
+    font-weight:bold;
+    font-size:medium;
+    text-decoration: none;
+    text-align: center;
+    display: none;
+}
+/*Reviews Container*/
+.reviews{
+    grid-area: reviews;
+    margin-top:2em;;
+    
+}
+/*Review Images Container*/
+.review-image{
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+/*Review Images*/
+.review-image img{
+    padding-top:2em;
+    width:100%;
+    max-height:10em;
+    border-radius:50%;    
+}
+/*Review Box*/
+.review-box{
+    justify-content: space-between;
+    flex-wrap:wrap;
+    flex-basis: 27%;
+    margin-right:10%;
+    margin-left:10%;
+}
+/*Review Border*/
+.review-border{
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    margin-top:3%;
+    max-width:40%;
+}
+/*Review Text*/
+.review-text{
+    flex-direction: column;
+    padding:3%;
+}
+/*Review Text Anchor*/
+.review-text a{
+    opacity:0;
+    text-decoration: none;
+    color:var(--orange);
+    font-size: small;
+    width:100%;
+}
+/*Rating color*/
+.checked{
+    color:var(--orange);
+}
+/*TEAM*/
+.team{
+    grid-area: team;
+    margin-top:2em;
+    
+}
+/*Team Box*/
+.team-box{
+   /* background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);*/
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: 40%;
+    flex-wrap:wrap;
+    flex-basis:15%;
+}
+/*Team Borders*/
+.team-border{
+    flex-direction: column;
+    border-radius: 50%;
+    margin:3%;
+    position:relative;
+    box-shadow: var(--shadow); 
+}
+/*Chef Image*/
+.chef-image img{
+    width:100%;
+    border-radius:50%;
+    max-height:10em; 
+}
+/*Chef Text*/
+.chef-text{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    opacity:0;
+    text-align: center;
+    width:80%;
+}
+/*Team Icons*/
+.team-icon{
+    justify-content: space-between;
+    width:100%;
+    margin-top:10%;
+}
+.team-icon a{
+    color:var(--basic-color);
+}
+/*Team Icon Span*/
+.team-icon span{
+    padding:2%;
+}
+/*Chef Name*/
+.chef-text .name{
+    font-size:small;
+}
+/*Menu Table*/
+.menu
+{
+    grid-area: menutable;
+    margin-top:2em;   
+}
+/*Menu Table Heading*/
+.menu h2{
+    padding:2%;
+    text-align: center;
+    /*background: var(--gradientcolor);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    color:var(--pink); 
+}
+/*Table Box*/
+.table-box{
+    padding:1%;
+}
+/*Menu Table Text*/
+.menu table,th, td{
+    border: 2px solid var(--contrast-color);
+    padding:2%;
+    color:var(--pink);
+    /*background: var(--gradientcolor);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+}
+/*Menu Table Container*/
+.menu table{
+    width:70%;
+    border-style: groove;
+}
+/*Menu Table Heading*/
+.menu th{
+    font-size:x-large;
+}
+.subs-menu p{
+    font-weight:bold;
+}
+/*Footer*/
+footer{
+    grid-area:footer;
+    background:var(--gradientcolor);
+    box-shadow: var(--shadow);
+    margin-top:7%;
+    flex-direction: column;    
+}
+/*Footer Icon*/
+.footer-icon{
+    width:20%;
+    justify-content: space-between;
+    color:var(--basic-color);
+    padding-bottom:4%;
+}
+/*Footer Icon Anchor Tag*/
+.footer-icon a{
+    text-decoration: none;
+    color:var(--basic-color);
+}
+/*Subscribe Form*/
+.subs-form{
+    margin:2%;
+    padding:2%;
+    width:100%;
+}
+/*Subscribe Form Heading*/
+.subs-form h2{
+    text-align: center;
+    color:var(--basic-color);
+}
+/*Subscribe Form Email*/
+.subs-form .email{
+    width:70%;
+    margin-top:2%;
+    padding: 2%;
+    margin-right:3%;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(rgb(210, 184, 205), rgb(246, 242, 244));
+    color:var(--contrast-color);
+}
+/*Subscribe Form Subscribe Button*/
+.subs-form .subscribe{
+    width:30%;
+    margin-top:2%;
+    padding: 2%;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(rgb(210, 184, 205), rgb(246, 242, 244));
+    color:var(--gradientcolor);
+}
+/*Hover*/
+/*Navigation Hover*/
+nav li a:hover{
+    color:var(--orange);
+}
+/*Banner Text Button Hovering*/
+.banner-text button:hover{
+    /*padding-right: 1.5em;*/
+    background:none;
+    border:3px solid var(--contrast-color);
+    /*background:var(--gradientcolor);
+    background-clip:text ;
+    -webkit-text-fill-color: transparent;*/
+    color:var(--pink);
+}
+/*Banner Text Icon  after*/
+/*.banner-text .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right:-20%;
+    }*/
+/*All button hovering and Span*/
+.button:hover span:after {
+    opacity: 1;
+    /*background:var(--gradientcolor);
+    background-clip:text ;
+    -webkit-text-fill-color: transparent;*/
+  }
+  /*Recipe Hovering*/
+.recipe-img img:hover{
+    transform: scale(0.9);
+    filter:brightness(0.2);   
+}
+/*Button Hovering*/
+.button:hover{
+    /*background:var(--gradientcolor);
+    background-clip:text ;
+    -webkit-text-fill-color: transparent;*/
+    background:none;
+    border:2px solid var(--contrast-color);
+    color:var(--pink);
+}
+/*Team Border and Chef Image Container Hovering*/
+.team-border:hover .chef-image{
+    transition:.25s;
+    transform: translateY(-3em);
+    padding:3%;
+}
+/*Team Border and Chef Text Hovering*/
+.team-border:hover .chef-text{
+    transition:.25s;
+    transform: translateY(4em);
+    opacity:1;
+    padding:3%;
+}
+/*Team Border and Chef Container Image Hovering*/
+.team-border:hover .chef-image img{
+    border-radius:20%;
+}
+/*Team Border hovering*/
+.team-border:hover{
+    border-radius:20%;
+    border:5px solid rgba(44, 20, 32,0.5);
+    background: linear-gradient(rgb(237, 114, 163),rgb(44, 20, 32));
+    color:var(--basic-color);
+    padding: 3%;
+}
+.team-icon a:hover{
+    color:var(--orange);
+}
+/*Overlay Image and Text Hovering*/
+.recipe-img img:hover + .overlay-text
+{
+    display:block;
+}
+/*Effect on Review Text anchor on Hovering*/
+.review-border:hover .review-text a {
+    opacity:1;
+    padding: 2%;
+}
+/*Review Button Hovering*/
+.reviews button:hover{
+    /*background:var(--gradientcolor);
+    background-clip:text ;
+    -webkit-text-fill-color: transparent;*/
+    background:none;
+    border:2px solid var(--contrast-color);
+    color:var(--pink);
+}
+/*Effect of Hover on review image*/
+.review-border:hover .review-image img 
+{
+    transition:.25s;
+    transform: translateY(-1em);
+}
+/*Effect on name upon hover*/
+.review-border:hover .name
+{
+    transition: .25s;
+    transform: translateY(-0.5em);
+    /*background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: contain;
+    color: transparent;
+    background-clip: text;*/
+}
+/*Subscribe Button Hover*/
+.subs-form .subscribe:hover{
+    background:var(--orange);
+}
+/*Buttons*/
+.button
+{
+    border-radius:50px;
+    border: none;
+    background-image: var(--gradientcolor);
+    color: var(--basic-color);
+    text-align: center;
+    padding:3%;
+    font-size:small;
+    width:100%;
+}
+/*Buttons Flex*/
+.button-flex{
+    margin-top:2%;
+    margin-bottom:2%;
+    width:100%;
+}
+.button-flex .button{
+    width:25%;
+    padding:1%;
+}
+/*Recipes, Reviews and Team H1*/
+.recipes h1, .reviews h1, .team h1{
+    text-align: center;
+    margin:3%;
+    /*background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: contain;
+    color: transparent;
+    background-clip: text;*/
+    color:var(--contrast-color);
+    text-transform: uppercase;
+}
+/*Recipes, Reviews and Team h1 Span*/
+.recipes h1 span, .reviews h1 span, .team h1 span{
+    /*background: var(--gradientcolor);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    color: var(--pink);
+    padding-left:1%;
+    
+}
+/*Text Align Center*/
+.review-border p, .review-text a,.review-image h2, .menu td, .recipe-img figcaption, .subs-menu{
+    text-align: center;
+}
+/*Animation*/
+@keyframes ban-text{
+    0%   {color:red; left:0px; top:0px;}
+    25%  {color:rgb(255, 0, 166); left:200px; top:0px;}
+    50%  {color:rgb(57, 64, 66); left:200px; top:200px;}
+    75%  {color:green; left:0px; top:200px;}
+    100% {color:rgb(210, 117, 18); left:0px; top:0px;}
+}
+/*Responsive Designing*/
+@media only screen and (max-width: 592px) 
+{
+    .menu-list a {
+        margin-left:30%;
+    }
+    nav label {
+        display: inline-block;
+        color:var(--pink);
+        background:pink;
+        font-style: normal;
+        font-size: 1.2em;
+        padding:1%;
+    }
+    .menu-list {
+        display: none;
+    }
+    nav input:checked ~ .menu-list
+    { 
+        display: block;
+    }
+   .banner
+   {
+        flex-direction: column;
+        background-color: rgba(116, 42, 100, 0.5);
+        margin:0;
+   }
+   .banner-text
+   {
+        width:100%;
+        position:absolute;
+        animation:none; 
+        z-index: 1;
+        color:var(--basic-color);
+        font-size:x-small;
+   }
+   .banner-img
+   {
+        width:100%;
+        display:flex;   
+   }
+   .banner-img img{
+        width:80%;
+        margin-left:20%;
+        position:relative;
+        z-index:-1;
+   }
+   .banner-text .button{
+        padding:1%;
+        background: none;
+        background-color: var(--basic-color);
+        color:var(--pink);
+        border:1px solid var(--pink);
+   }
+   .banner-text .button:hover{
+    background-color: var(--basic-color);
+    border: 1px solid var(--orange);
+    color:var(--orange);
+    }
+    .review-box{
+        justify-content: center;    
+    }
+    .review-border{
+        min-width:100%;
+    }
+    .team-border{
+       width:80%;
+       margin-top:5%;
+    }
+    .button-flex button{
+       padding:2%;
+       margin:5%;
+    }
+    
+}
+/*Contact us Page*/
+/*Form Styling*/
+#contactform{
+    border:2px solid var(--contrast-color);
+    width:50%;
+    margin:10% auto 3% auto;
+    padding:5%;
+    background-color: #f2e6e6;
+    border-radius: 2em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Inputs Styling*/
+#firstname,#lastname,#formemail,#formquery{
+    width:100%;
+    margin-top:2%;
+    margin-bottom:2%;
+    padding:3%;
+    border-radius: 2em;
+}
+/*Form Heading*/
+#contactform h2 {
+    margin-bottom: 1em;
+}
+/*Form Button Styling*/
+#formbutton{
+    width:50%;
+    border-radius:2em;
+    padding:5%;
+    margin-top:7%;
+    color:var(--basic-color);
+    font-weight:bold;
+    font-size:large;
+    border:1px solid var(--contrast-color);
+    background-color: var(--contrast-color);
+}
+/*Form Button Hovering*/
+#formbutton:hover{
+    background-color: var(--orange);
+    border-color:var(--orange);
+}
+/*Label styling*/
+#contactform label{
+    font-size:large;
+}
+/*Forms Error Styling*/
+.error{
+    color:red;
+}
+
+
