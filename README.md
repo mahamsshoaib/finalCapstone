@@ -17,17 +17,21 @@ Table of Contents
 5.Installation
 
 To install Your Recipes Website, follow these steps:
-1.Clone the repository from Github: git clone https://github.com/[username]/Food-Website.git
+1.Clone the repository from Github: https://github.com/mahamsshoaib/finalCapstone.git
 2.Install the required dependencies: npm install
 3.Start the development server: npm run start
+4.Click Finish when you are done
 
 Usage
 Once installed, you can use Your Recipe Website as follows:
-1.Open your web browser and navigate to http://localhost:3000
+1.Open "index.html" where the project is downloaded.
 2.To save a recipe for later, click the "Save" button located on the recipe page.
 3.To access your saved recipes, click on the "Saved Recipes" tab in the menu.
-4.To leave a comment on a recipe, scroll to the bottom of the recipe page and type your comment in the text field.
+4.To leave a comment scroll to the recipe on the recipe page and type your comment in the text field provided.
 5.To contact us, click on "Contact Us" tab in the menu and fill out the form, our team will get back to you at your provided email address.
+![This is your homepage where you can browse and click on other tabs to visit other pages](Screenshots/homepage.png)
+![This is where you can scroll from homepage and checkout all the reviews](Screenshots/customerReviews.png)
+![In case if you have got any questions, queries or concern, you can contact us here](Screenshots/contactus.png)
 
 
 Food Website Screenshot
