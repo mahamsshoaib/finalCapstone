@@ -29,12 +29,11 @@ Once installed, you can use Your Recipe Website as follows:
 3.To access your saved recipes, click on the "Saved Recipes" tab in the menu.
 4.To leave a comment scroll to the recipe on the recipe page and type your comment in the text field provided.
 5.To contact us, click on "Contact Us" tab in the menu and fill out the form, our team will get back to you at your provided email address.
+
+Your Recipes Website Screenshot
 ![This is your homepage where you can browse and click on other tabs to visit other pages](Screenshots/homepage.png)
 ![This is where you can scroll from homepage and checkout all the reviews](Screenshots/customerReviews.png)
 ![In case if you have got any questions, queries or concern, you can contact us here](Screenshots/contactus.png)
-
-
-Food Website Screenshot
 
 Credits
 Your Recipe Website was created by Maham Shoaib. The project is open source and contributions are welcome.
